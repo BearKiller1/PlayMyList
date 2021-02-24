@@ -1,0 +1,12 @@
+<div class="body">
+    <form [formGroup]="userGroup" (ngSubmit)="log()">
+        <img [src]="icon">
+        <input type="text"  formControlName="username" placeholder="Username">
+        <input type="text"  formControlName="password" placeholder="Password">
+        <button type="submit">Log In</button>
+        <p routerLink="../register">Register</p>
+        <br>
+        <p>or</p>
+        <img [src]="Qrcode">
+    </form>
+</div>

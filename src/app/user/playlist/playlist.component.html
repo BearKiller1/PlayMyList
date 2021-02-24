@@ -1,0 +1,51 @@
+<div class="header">
+
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+
+    <div class="userInfo" (click)="userEdit = !userEdit">
+        <p>Profile Sign out</p>
+    </div>
+    
+    <img [src]="triangle" class="triangle">
+</div>
+
+<div class="content">
+    <div class="add" (click)="addPlaylist = !addPlaylist">
+        <img [src]="addicon">
+    </div>
+    <div *ngFor="let item of data" class="box">
+        <img [src]="item.img">
+    </div>
+</div>
+
+<div class="blackbox" *ngIf="addPlaylist || userEdit">
+
+</div>
+
+<div class="newPLaylist" *ngIf="addPlaylist">
+    <h1>Create new playlist </h1>
+    <img [src]="closeicon" class="closebutton" (click)="addPlaylist = !addPlaylist">
+    <input type="text" placeholder="name...">
+    <input type="text" placeholder="@add Members">
+    
+    <h1>change your thumbnail</h1>
+
+    <div class="imageUpload">
+        <p>Drag or Drop or Browse</p>
+    </div>
+    <button>Submit</button>
+</div>
+
+
+<div class="UserEdit" *ngIf="userEdit">
+    <h1>Upload your profile picture</h1>
+    <img [src]="closeicon" class="closebutton" (click)="userEdit = !userEdit">
+    <div class="userImgUpload">
+        <p>Drag or Drop or Browse</p>
+    </div>
+    <button>Submit</button>
+    <button class="cancelButton">Cancel</button>
+</div>

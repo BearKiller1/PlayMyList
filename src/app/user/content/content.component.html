@@ -1,0 +1,13 @@
+<div class="sideMenu">
+    <img [src]="icon">
+    <div class="menuText">
+        <p routerLink="rooms" routerLinkActive="active">Rooms</p>
+        <p routerLink="discover" routerLinkActive="active">Discover</p>
+        <p routerLink="playlist" routerLinkActive="active">Playlist</p>
+        <p routerLink="setting" routerLinkActive="active">Settings</p>
+    </div>
+    <img [src]="Qrcode">
+</div>
+<div class="content">
+<router-outlet></router-outlet>
+</div>

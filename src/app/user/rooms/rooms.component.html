@@ -1,0 +1,62 @@
+<div class="header">
+
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+
+    <div class="userInfo" (click)="userEdit = !userEdit">
+        <p>Profile Sign out</p>
+    </div>
+    
+    <img [src]="triangle" class="triangle">
+</div>
+
+<div class="content">
+    <div class="add" (click)="addRoom = !addRoom">
+        <img [src]="addicon">
+    </div>
+</div>
+
+<div class="blackbox" *ngIf="addRoom || userEdit">
+
+</div>
+
+<div class="newRoom" *ngIf="addRoom">
+    <h1>Create new room</h1>
+    <img [src]="closeicon" class="closebutton" (click)="addRoom = !addRoom">
+    <input type="text" placeholder="name...">
+    <input type="text" placeholder="@add Members">
+    <div class="link">
+        <input type="text" value="TestLink" class="linkInput">
+        <button>Copy Link</button>
+    </div>
+    
+    <h1>colors</h1>
+    <div class="colors">
+        <div class="color black">
+            <img [src]="addicon">
+        </div>
+        <div class="color darkblue">
+            
+        </div>
+        <div class="color red">
+            
+        </div>
+        <div class="color purple">
+            
+        </div>
+    </div>
+    
+    <button>Submit</button>
+</div>
+
+<div class="UserEdit" *ngIf="userEdit">
+    <h1>Upload your profile picture</h1>
+    <img [src]="closeicon" class="closebutton" (click)="userEdit = !userEdit">
+    <div class="userImgUpload">
+        <p>Drag or Drop or Browse</p>
+    </div>
+    <button>Submit</button>
+    <button class="cancelButton">Cancel</button>
+</div>

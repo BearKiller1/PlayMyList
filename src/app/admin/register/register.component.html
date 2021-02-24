@@ -1,0 +1,19 @@
+<div class="body">
+    <form [formGroup]="userGroup" (ngSubmit)="register()">
+        <img [src]="icon">
+        <input type="text"  formControlName="email" placeholder="Email">
+        <input type="text"  formControlName="username" placeholder="Username">
+        <input type="text"  formControlName="password" placeholder="Password">
+        <input type="text"  formControlName="repeat" placeholder="Repeat">
+        <button type="submit">Sign up</button>
+        <p routerLink="../login">Log in</p>
+        <div class="otherRegister">
+            <p>Sign up with google</p>
+            <img [src]="Googleicon">
+        </div>
+        <div class="otherRegister fb">
+           <p>Sign up with facebook</p> 
+          <img [src]="Fbicon">
+        </div>
+    </form>
+</div>

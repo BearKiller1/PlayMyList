@@ -1,0 +1,116 @@
+@import "~src/assets/scss/library.scss";
+
+.header{
+    @include flex();
+    width:95%;
+}
+
+.search{
+    @include search();
+    @include flex();
+    input{
+        outline:0;
+        border:0;
+        width:80%;
+        background:$darkBlue;
+
+    }
+    button{
+        outline:0;
+        border:0;
+        width:10%;
+        font-size:2vw;
+        background:$darkBlue;
+        color:white;
+    }
+    ::placeholder{
+        color:$black;
+    }
+}
+
+.userInfo{
+    @include flex();
+    @include input();
+    width:15%;
+    height:8vh;
+    background:gray;
+}
+
+.triangle{
+    width:2%;
+    height:2vh;
+}
+
+.content{
+    width:80%;
+    margin-left:5%;
+    .add{
+        @include box();
+        img{
+            width:100%;
+            height:30vh;
+        }
+    }
+}
+
+.newPLaylist, .UserEdit{
+    @include popout();
+    @include flex();
+    margin-top:-10vh;
+    flex-direction:column;
+    button{
+        @include button();
+        width:80%;
+        background:$darkBlue;
+    }
+    input{
+        @include input();
+        background:$darkBlue;
+        width:60%;
+    }
+    .color{
+        @include color();
+        img{
+            width:100%;
+            height:10vh;
+        }
+    }
+    .closebutton{
+        @include closeIcon();
+    }
+}
+
+.box{
+    @include box();
+    img{
+        width:100%;
+        height:inherit;
+    }
+}
+
+.imageUpload{
+    @include flex();
+    cursor:pointer;
+    border-radius:6px;
+    width:60%;
+    height:20vh;
+    border: 5px solid $darkBlue;
+}
+
+.userImgUpload{
+    @include flex();
+    cursor:pointer;
+    border-radius:6px;
+    width:80%;
+    height:40vh;
+    border: 5px solid $darkBlue;
+}
+
+.blackbox{
+    @include blackBox();
+}
+.UserEdit{
+    .cancelButton{
+        background-color:red;
+    }
+}

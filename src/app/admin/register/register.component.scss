@@ -1,0 +1,46 @@
+@import "~src/assets/scss/library.scss";
+.body{
+    width:100%;
+    height:100vh;
+    background:$darkBlue;
+    margin-top:0vh;
+    position:absolute;
+}
+form{
+    @include form();
+    @include flex();
+    margin:10vh 35%;
+    input{
+        @include input();
+    }
+    button{
+        @include button();
+        width:50%;
+        color: $red;
+    }
+    img{
+        width:30%;
+        height:14vh;
+    }
+    p{
+        color:white;
+    }
+}
+.otherRegister{
+    @include flex();
+    @include input();
+    width:60%;
+    height:8vh;
+    background:white;
+    border-radius:30px;
+    img{
+        width:10%;
+        height:5vh;
+    }
+    p{
+        color:black;
+    }
+}
+.fb{
+    background:#3b5998;
+}
